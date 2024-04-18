@@ -75,6 +75,25 @@ html {
     margin-top: 2rem;
 }
 
+.logout {
+    margin-top: 4rem;
+}
+.logout a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #3b82f6;
+    padding: 2rem;
+    border-radius: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+}
+
 .google-img {
     width: 3rem;
 }

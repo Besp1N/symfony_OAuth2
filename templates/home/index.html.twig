@@ -3,5 +3,13 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-    <p>It's working</p>
+    <div class="container">
+        <div class="welcome">
+            <h1>Welcone {{user.name}} </h1>
+            <div class="logout">
+                <a href="{{ path('auth_oauth_logout') }}">Logout</a>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}

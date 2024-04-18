@@ -6,17 +6,17 @@
     <div class="container">
         <div class="form-container">
             <h1>Login</h1>
-            <form action="#" method="POST" class="form">
+            <form action="{{ path('auth_oauth_login', {service: 'myOauthService'}) }}" method="POST" class="form">
                 <div class="form-items">
                     <input type="text" name="_username" placeholder="Username">
                     <input type="password" name="_password" placeholder="Password">
                     <button type="submit">Login</button>
-                    <a href="#" class="google-button">
-                        <img class="google-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" />
-                        <p>Continue with Google</p>
-                    </a>
                 </div>
             </form>
+            <a href="{{ path('auth_oauth_connect', {service: 'google'}) }}" class="google-button">
+                <img class="google-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" />
+                <p>Continue with Google</p>
+            </a>
         </div>
     </div>
 
