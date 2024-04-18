@@ -12,6 +12,10 @@ class HomeController extends AbstractController
     public function index(): Response
     {
         $user = $this->getUser();
+        if (!$user) {
+            return $this->redirectToRoute('auth_oauth_login');
+        }
+
         return $this->render('home/index.html.twig', [
             'user' => $user
         ]);
